@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2015. Wang Biao(wbbox@foxmail.com).
+ * you may not use this file except in compliance with the License.
+ * All rights reserved.
+ */
+
 package org.wangbiao.s2sh.model;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
