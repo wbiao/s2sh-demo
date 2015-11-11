@@ -6,6 +6,8 @@
 
 package org.wangbiao.s2sh.model;
 
+import org.wangbiao.s2sh.common.model.BaseModel;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;

@@ -4,7 +4,7 @@
  * All rights reserved.
  */
 
-package org.wangbiao.s2sh.model;
+package org.wangbiao.s2sh.common.model;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
