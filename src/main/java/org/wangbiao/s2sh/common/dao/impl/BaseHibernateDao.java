@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.wangbiao.s2sh.common.dao.BaseDao;
+import org.wangbiao.s2sh.common.model.BaseModel;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
