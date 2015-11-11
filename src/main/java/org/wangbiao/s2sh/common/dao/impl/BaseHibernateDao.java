@@ -1,10 +1,16 @@
 
-package org.wangbiao.s2sh.dao.impl;
+/*
+ * Copyright (c) 2015. Wang Biao(wbbox@foxmail.com).
+ * you may not use this file except in compliance with the License.
+ * All rights reserved.
+ */
+
+package org.wangbiao.s2sh.common.dao.impl;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
-import org.wangbiao.s2sh.dao.BaseDao;
+import org.wangbiao.s2sh.common.dao.BaseDao;
 import org.wangbiao.s2sh.model.BaseModel;
 
 import java.io.Serializable;
@@ -34,11 +40,6 @@ public class BaseHibernateDao<T extends BaseModel> implements BaseDao<T> {
 
     }
 
-    /**
-     * 保存实体
-     * @param entity
-     * @return
-     */
     public T save(T entity) {
         handleBaseInfo(entity);
         if(entity.getId() == null || "".equals(entity.getId().trim())) {
@@ -55,35 +56,18 @@ public class BaseHibernateDao<T extends BaseModel> implements BaseDao<T> {
         return entity;
     }
 
-    /**
-     * 根据ID删除实体
-     * @param id
-     */
     public void deleteById(Serializable id) {
         hibernateTemplate.delete(findById(id));
     }
 
-    /**
-     * 删除实体
-     * @param entity
-     */
     public void delete(T entity) {
         hibernateTemplate.delete(entity);
     }
 
-    /**
-     * 根据ID查找实体
-     * @param id
-     * @return
-     */
     public T findById(Serializable id) {
         return hibernateTemplate.get(entityClass, id);
     }
 
-    /**
-     * 处理实体的基本信息,设置createTime,modifyTime和sortIndex
-     * @param entity
-     */
     private void handleBaseInfo(T entity) {
         if(entity.getSortIndex() == null) {
             entity.setSortIndex(System.currentTimeMillis());

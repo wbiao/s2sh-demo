@@ -19,7 +19,7 @@
     <constant name="struts.action.extension" value="do,jspa,xhtml,mp4,flv" /><!-- .do为访问扩展名 -->
 
     <package name="default" namespace="/" extends="struts-default">
-        <action name="test_*" class="testController" method="{1}">
+        <action name="person_*" class="personController" method="{1}">
             <result name="success">/WEB-INF/success.jsp</result>
         </action>
     </package>
